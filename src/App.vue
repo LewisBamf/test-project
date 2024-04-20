@@ -7,6 +7,10 @@
     <Globegif />
   </div>
 
+  <div class="grid-item">
+    <Workercards />
+  </div>
+
 
 </div>
 
@@ -16,13 +20,15 @@
 import Maintitle from './components/Title.vue';
 import navbar from './components/navbar.vue';
 import Globegif from './components/globe.vue';
+import Workercards from './components/workers.vue'
 
 export default {
   name: 'App',
   components: {
     navbar,
     Maintitle,
-    Globegif
+    Globegif,
+    Workercards
   }
 }
 </script>
@@ -74,6 +80,8 @@ body{
   margin-top: 100px;
 }
 
+
+/* sectoin 1 */
 .grid-item{
   grid-row: 1;
   font-size: xx-large;
@@ -94,5 +102,14 @@ body{
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+
+/* section 2 */
+
+.grid-item:nth-child(2){
+  grid-row: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around
 }
 </style>
